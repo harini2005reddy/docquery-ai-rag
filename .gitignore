@@ -1,0 +1,26 @@
+# Virtual environments
+.venv/
+backend/.venv/
+
+# Environment variables / secrets
+.env
+backend/.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local uploaded files
+uploads/
+backend/uploads/
+
+# Local ChromaDB data
+chroma_db/
+backend/chroma_db/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS files
+desktop.ini
+.DS_Store
