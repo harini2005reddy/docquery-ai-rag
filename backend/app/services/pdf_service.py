@@ -1,4 +1,4 @@
-import pymupdf
+import fitz
 
 from langchain_text_splitters import (
     RecursiveCharacterTextSplitter,
@@ -24,7 +24,7 @@ def extract_pdf_pages(file_path: str) -> list[dict]:
 
     pages = []
 
-    with pymupdf.open(file_path) as document:
+    with fitz.open(file_path) as document:
         for page_number, page in enumerate(document, start=1):
             text = page.get_text("text").strip()
 
